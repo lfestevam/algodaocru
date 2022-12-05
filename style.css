@@ -1,0 +1,222 @@
+/*Utilitários*/
+:root {
+  --cor-um: #ffffff;
+  --cor-dois: #000000;
+  --cor-tres: #ff00bf;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: var(--cor-um);
+}
+ul {
+  list-style: none;
+}
+li {
+  margin-top: 20px;
+}
+h4 {
+  margin-bottom: 10px;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+dt {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Alexandria", sans-serif;
+  position: relative;
+}
+.icon img {
+  width: 40px;
+  height: 40px;
+}
+.conteiner-base {
+  max-width: 85rem;
+  margin: 0 auto;
+}
+/*Fonts*/
+.font-1 {
+  font: 100 48px/48px "Poppins", sans-serif;
+}
+.font-2 {
+  font: 800 48px/48px "Raleway", sans-serif;
+}
+.font-3-m {
+  font: 600 20px/32px "Alexandria", sans-serif;
+}
+.font-3-m2 {
+  font: 600 14px/16px "Alexandria", sans-serif;
+}
+.font-3-s {
+  font: 400 12px/16px "Alexandria", sans-serif;
+}
+.font-3-l {
+  font: 600 24px/40px "Alexandria", sans-serif;
+}
+/*CORES*/
+
+.c1 {
+  color: var(--cor-um);
+}
+.c2 {
+  color: var(--cor-dois);
+}
+.c3 {
+  color: var(--cor-tres);
+}
+
+/*Header*/
+.header {
+  background-color: var(--cor-um);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+.principal-conteiner {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  gap: 50px;
+  padding: 30px 20px 100px 20px;
+  background-image: url("./img/background.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.linha3 p {
+  max-width: 60ch;
+  margin: 0 auto;
+}
+.linha4 h3 {
+  max-width: 35ch;
+  margin: 0 auto;
+}
+
+/*SECUNDARIA*/
+
+.secundaria-conteiner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 30px 30px;
+  background-color: var(--cor-um);
+  justify-items: center;
+}
+.lista-cursos {
+  max-width: 300px;
+}
+.form {
+  background-color: var(--cor-dois);
+  padding: 0px 30px 30px 30px;
+  border-radius: 3px;
+  box-shadow: 0rem -5.5rem;
+  position: relative;
+  justify-content: start;
+  height: max-content;
+}
+input[type="text"],
+input[type="tel"] {
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  border: 1px solid var(--cor-tres);
+  width: 100%;
+}
+label {
+  color: var(--cor-um);
+}
+.span {
+  position: absolute;
+  top: -60px;
+}
+textarea {
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid var(--cor-tres);
+  width: 100%;
+}
+.radio {
+  margin-top: 10px;
+}
+.btn {
+  padding: 10px 15px;
+  width: 100%;
+  margin-top: 20px;
+  background-color: var(--cor-tres);
+  border: 2px solid var(--cor-um);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #fa5ded;
+}
+.curso {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.descricao {
+  padding: 0px 10px 0px 10px;
+}
+.termos-uso {
+  margin: 20px 0px 10px 0px;
+}
+/*RESPONSIVO*/
+@media (max-width: 1000px) {
+  .secundaria-conteiner {
+    grid-template-columns: 1fr;
+  }
+  .form {
+    grid-row: 3;
+  }
+  .segunda {
+    margin-bottom: 8rem;
+  }
+  .segunda ul li:last-child p {
+    margin-bottom: 3rem;
+  }
+  .lista-cursos {
+    max-width: 100%;
+    justify-self: start;
+  }
+  .lista-cursos li p {
+    display: none;
+  }
+  .lista-cursos li p.ativo {
+    display: block;
+  }
+  .js-acordion::after {
+    content: "▲";
+    margin-left: 10px;
+  }
+  .js-acordion.ativo::after {
+    content: "▼";
+  }
+  .p-acordion.ativo {
+    display: block;
+    animation: slide 0.3s forwards;
+  }
+  @keyframes slide {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+@media (max-width: 330px) {
+  .titulo {
+    font-size: 38px;
+  }
+}
